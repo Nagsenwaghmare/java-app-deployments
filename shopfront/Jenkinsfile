@@ -1,0 +1,10 @@
+pipeline{
+    agent any
+    stages{
+        stage("creating jar file"){
+            dir(./shopfront){
+                sh "mvn clean package"
+            }
+        }
+    }
+}
